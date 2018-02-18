@@ -3,8 +3,18 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
 </head>
-<body>
+
+
+
+<body class="body">
+<div>
+{{message}}
+{{error.message}}
+</div>
 <div data-ng-controller='UserController'>
 <div class="container" align="justify">
 		<div class="row vertical-offset-100">
@@ -29,3 +39,6 @@
 		</div>
 </div>
 </div>
+</body>
+</div>
+</html>

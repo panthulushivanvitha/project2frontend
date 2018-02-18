@@ -1,7 +1,7 @@
 /**
  * 
  */
-var app=angular.module('app',['ngRoute'])
+var app=angular.module('app',['ngRoute','ngCookies'])
 app.config(function($routeProvider){
 	$routeProvider
 	.when('/register',{
@@ -15,25 +15,26 @@ app.config(function($routeProvider){
 	.otherwise({
 		templateUrl:'views/home.html'
 	})
+})
 	app.run(function($rootScope,$location,UserService,$cookieStore){
 	if($rootScope.loggedInUser==undefined)
-		$rootScope.loggedInUser=$cookieStore.get("loggedInUser")
+		$rootScope.loggedInUser=$cookieStore.get("currentuser")
 		
 		$rootScope.logout=function()
 		{
 		UserService.logout().then(function(response)
 				{
-			$rootScope.message="Loggedout Successfully..."
+			
 				delete $rootScope.loggedInUser
-				$cookieStore.remove("loggedInUser")
-				$location.path('/login')
+				$cookieStore.remove("currentuser")
+				$rootScope.message="Loggedout Successfully..."
+				$location.path('/home')
 				},function(response)
 				{
-					console.log(response.status)
-					$rootScope.message=response.data.message
+					$rootScope.error=response.data
+					if(response.status==401)
 					$location.path('/login')
 				})
 	}
 })
 	
-})

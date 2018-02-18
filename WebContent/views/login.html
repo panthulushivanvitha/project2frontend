@@ -1,44 +1,18 @@
-<!doctype html>
-<html data-ng-app="myApp">
-<head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
- 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-
-</head>
-
-
-
-<body class="body">
-<div>
-{{message}}
 {{error.message}}
-</div>
-<div data-ng-controller='UserController'>
-<div class="container" align="justify">
-		<div class="row vertical-offset-100">
-		    <div class="col-md-6 col-md-offset-14">
-		    	<div class="panel panel-default">
-					<div class="panel-heading">
-				    	<h3 class="panel-title" align="center"><i>Please Login</i></h3>
-				 	</div>
-					<fieldset><br>
-					
-						<div class="form-group" align="center">
-							<label class="col-md-4 control-label"><i>Enter UserName</i></label><input type="text" data-ng-model="user.email"><br>
-						</div>
-						<div class="form-group" align="center">
-							<label class="col-md-4 control-label"><i>Enter Password</i></label><input type="password" data-ng-model="user.password"><br>
-						</div>
-				
-						<div class="form-group" align="center"><input type="submit" value="login" data-ng-click="login(user)"><br></div><br>
-					</fieldset>
-				</div>
-			</div>
-		</div>
-</div>
-</div>
-</body>
-</div>
-</html>
+<h2 style="color:white">Login Form</h2>
+
+<form>
+  <div class="imgcontainer">
+    <img src="resources/images/image.jpg" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container">
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Username" data-ng-model="user.email" required>
+
+    <label for="password"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" data-ng-model="user.password" required>
+        
+   <div class="form-group" align="center"><input type="submit"style="color:black" value="login" data-ng-click="login(user)"><br></div><br>
+    
+</form>

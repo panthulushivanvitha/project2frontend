@@ -5,36 +5,31 @@
 <title>Insert title here</title>
 </head>
 <body data-ng-controller='UserController'>
-<div class="container" align="center">
-		<div class="row vertical-offset-100">
-		    <div class="col-md-6 col-md-offset-14">
-		    	<div class="panel panel-default">
-					<div class="panel-heading">
-				    	<h3 class="panel-title" align="center"><i>Please Register</i></h3>
-				 	</div>
-					<fieldset><br>
-						<div class="form-group" align="center">
-							<label class="col-md-4 control-label"><i>Enter FirstName</i></label><input type="text" ng-model="user.firstName"><br>
-						</div>	
-						<div class="form-group" align="center">
-							<label class="col-md-4 control-label"><i>Enter LastName</i></label><input type="text" ng-model="user.lastName"><br>
-						</div>
-						<div class="form-group" align="center">
-							<label class="col-md-4 control-label"><i>Enter Email</i></label><input type="text" ng-model="user.email"><br>
-						</div>
-						<div class="form-group" align="center">
-							<label class="col-md-4 control-label"><i>Enter PhoneNumber</i></label><input type="text" ng-model="user.phonenumber"><br>
-						</div>
-						<div class="form-group" align="center">
-							<label class="col-md-4 control-label"><i>Enter Password</i></label><input type="password" ng-model="user.password"><br>
-						</div>
-						<div class="form-group" align="center">
+<form  style="border:1px solid #ccc">
+  <div class="container">
+    <h1>Sign Up</h1>
+    <p>Please fill in this form to create an account.</p>
+    <hr>
+<label for="FirstName"><b>Enter FirstName</b></label>
+    <input type="text" placeholder="Enter FirstName" ng-model="user.firstName" required>
+    <label for="LastName"><b>Enter LastName</b></label>
+    <input type="text" placeholder="Enter LastName" ng-model="user.lastName" required>
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" ng-model="user.email" required>
+    <label for="PhoneNumber"><b>Enter PhoneNumber</b></label>
+    <input type="text" placeholder="Enter PhoneNumber" ng-model="user.phonenumber" required>
+    
+
+    <label for="password"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" ng-model="user.password" required>
+<div class="form-group" align="center">
 							<label class="col-md-4 control-label"><i>Select Role</i></label><input type="radio" ng-model="user.role" value="Student">Student
 							<input type="radio" ng-model="user.role" value="Alumini">Alumini
 							<input type="radio" ng-model="user.role" value="Employee">Employee
 						</div>
-						<div class="form-group" align="center"><input type="submit" value="Register" ng-click="registerUser(user)"><br></div><br>
-					</fieldset>
-				</div>
-			</div>
-		</div>
+						<div class="form-group" align="center"><input type="submit" style="color:black"value="Register" ng-click="registerUser(user)"><br></div><br>
+
+  </div>
+</form>
+</body>
+</html>

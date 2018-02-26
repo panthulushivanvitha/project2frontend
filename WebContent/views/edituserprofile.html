@@ -5,7 +5,6 @@
 <title>Insert title here</title>
 </head>
 <body data-ng-controller='UserController'>
-
 <form  style="border:1px solid #ccc">
   <div class="container">
     <h1>Sign Up</h1>
@@ -16,7 +15,7 @@
     <label for="LastName"><b>Enter LastName</b></label>
     <input type="text" placeholder="Enter LastName" ng-model="user.lastName" required>
     <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" ng-model="user.email" required>
+    <input type="text" placeholder="Enter Email" ng-model="user.email" disabled>
     <label for="PhoneNumber"><b>Enter PhoneNumber</b></label>
     <input type="text" placeholder="Enter PhoneNumber" ng-model="user.phonenumber" required>
     
@@ -24,14 +23,13 @@
     <label for="password"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" ng-model="user.password" required>
 <div class="form-group1" align="center">
-							<label class="col-md-4 control-label"><i>Select Role</i></label><input type="radio" ng-model="user.role" value="Student" style="color:white">Student
+							<label class="col-md-4 control-label"><i>Select Role</i></label><input type="radio" ng-model="user.role" value="Student">Student
 							<input type="radio" ng-model="user.role" value="Alumini">Alumini
 							<input type="radio" ng-model="user.role" value="Employee">Employee
 						</div>
-						<div class="form-group" align="center"><input type="submit" style="color:black"value="Register" ng-click="registerUser(user)"><br></div><br>
+						<div class="form-group" align="center"><input type="submit" style="color:black"value="Edit Profile" ng-click="updateUser(user)"><br></div><br>
 
   </div>
 </form>
-
 </body>
 </html>

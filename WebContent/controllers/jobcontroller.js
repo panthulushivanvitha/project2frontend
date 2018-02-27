@@ -1,28 +1,28 @@
 /**
  * 
  */
-app.controller('JobController',function($scope,$location,JobService)
+app.controller('JobController',function($scope,$rootScope,$location,JobService)
 		{
+	$scope.addJob=function(job){
+		JobService.addJob(job).then(function(response){
+			alert('Job Details Posted successfully....')
+			$location.path('/home')
+		},function(response){
+			$rootScope.error=response.data
+			if(response.status==401)
+			$location.path('/login')
+			
+		})
+	}
 	
-	$scope.jobs=JobService.getAllJobs().then(function(response){
+	JobService.getAllJobs().then(function(response){
 		$scope.jobs=response.data;
 	},function(response){
-		$scope.message=response.data.message
+		$rootScope.error=response.data
+		if(response.status==401)
 		$location.path('/login')
 	})
 	
-	
-	$scope.addJob=function(){
-		JobService.addJob($scope.job).then(function(response){
-			$location.path('/getalljobs')
-		},function(response){
-			$scope.message=response.data.message
-			if(response.status==401)
-			$location.path('/login')
-			if(response.status==500)
-			$location.path('/savejob')
-		})
-	}
 	
 	$scope.getJobDetail=function(id){
         $scope.showdetails=true;

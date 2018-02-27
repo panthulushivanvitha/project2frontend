@@ -7,18 +7,18 @@ background: url("http://www.goodwp.com/images/201302/goodwp.com_27372.jpg");
 
 /* Full-width input fields */
 .container h1{
-	color:#ffffff;
+	color:black;
 }
 .container p{
-	color:#ffffff;
+	color:black;
 }.container b{
-	color:#ffffff;
+	color:black;
 }
 .container i{
-	color:#ffffff;
+	color:black;
 }
 .form-group{
-	color:#ffffff;
+	color:black;
 }
 input[type=text], input[type=password] {
     width: 100%;

@@ -15,6 +15,7 @@
  <link rel="stylesheet" href="resources/assets/css/Pretty-Footer.css"/>
   <link rel="stylesheet" href="resources/assets/css/Pretty-Registration-Form.css"/>
    <link rel="stylesheet" href="resources/assets/css/login.css"/>
+   <link rel="stylesheet" href="resources/assets/css/jobform.css"/>
    
 
  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
@@ -23,6 +24,8 @@
  <script type="text/javascript" src="js/app.js"></script>
  <script type="text/javascript" src="controllers/usercontroller.js"></script>
   <script type="text/javascript" src="services/userservice.js"></script>
+   <script type="text/javascript" src="controllers/jobcontroller.js"></script>
+  <script type="text/javascript" src="services/jobservice.js"></script>
 
 </head>
 <body ng-app="app">
@@ -56,7 +59,7 @@
 <li><a href="#/register"><span class="glyphicon glyphicon-pencil" ng-show="loggedInUser.firstName==undefined">Register</span></a></li>
 <li><a href="#/login"><span class="glyphicon glyphicon-log-in" ng-show="loggedInUser.firstName==undefined">Login</span></a></li>
 <li><a href="#/addjob" ng-show="loggedInUser.role=='ADMIN'">Save Job Details</a><li>
- <li><a href="#/getalljobs" ng-show="loggedInUser.firstname">GetAllJobs</a></li>
+ <li><a href="#/alljobs" ng-show="loggedInUser.firstName">GetAllJobs</a></li>
 <li><a href="#/edituserprofile"><span class="glyphicon glyphicon-pencil" ng-show="loggedInUser.firstName!=undefined">EditProfile</span></a></li>
 <li><a href="#" ng-show="loggedInUser.firstName">Hi  {{loggedInUser.firstName}}&nbsp;{{loggedInUser.lastName}}</a></li>
 <li><a href="#/"><span class="glyphicon glyphicon-log-out"  ng-click="logout()"ng-show="loggedInUser.firstName!=undefined">Logout</span></a></li>

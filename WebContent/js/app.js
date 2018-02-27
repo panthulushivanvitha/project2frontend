@@ -20,10 +20,11 @@ app.config(function($routeProvider){
 		templateUrl:'views/jobform.html',
 		controller:'JobController'
 	})
-	.when('/getalljobs',{
+	.when('/alljobs',{
 		templateUrl:'views/jobtitle.html',
 		controller:'JobController'
 	})
+
 	.otherwise({
 		templateUrl:'views/home.html'
 	})

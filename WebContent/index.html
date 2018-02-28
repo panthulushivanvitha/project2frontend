@@ -26,6 +26,10 @@
   <script type="text/javascript" src="services/userservice.js"></script>
    <script type="text/javascript" src="controllers/jobcontroller.js"></script>
   <script type="text/javascript" src="services/jobservice.js"></script>
+    <script type="text/javascript" src="controllers/blogcontroller.js"></script>
+      <script type="text/javascript" src="services/blogpostservice.js"></script>
+      <script type="text/javascript" src="controllers/blogdetailcontroller.js"></script> 
+  	
 
 </head>
 <body ng-app="app">
@@ -63,7 +67,13 @@
 <li><a href="#/edituserprofile"><span class="glyphicon glyphicon-pencil" ng-show="loggedInUser.firstName!=undefined">EditProfile</span></a></li>
 <li><a href="#" ng-show="loggedInUser.firstName">Hi  {{loggedInUser.firstName}}&nbsp;{{loggedInUser.lastName}}</a></li>
 <li><a href="#/"><span class="glyphicon glyphicon-log-out"  ng-click="logout()"ng-show="loggedInUser.firstName!=undefined">Logout</span></a></li>
-
+<li class="dropdown">
+    	     			   <a href="" class="dropdown-toggle" data-toggle="dropdown" data-ng-show="loggedInUser.firstName">Blog<b class="caret"></b></a>
+ 			 				<ul class="dropdown-menu">
+ 							<li><a  data-ng-show="loggedInUser.firstName" href="#/getblogs">View all Blogs</a></li>
+ 							<li><a  data-ng-show="loggedInUser.firstName" href="#/addblog">New Blog</a></li>
+				 </ul>
+ 					</li>
 </ul>
 </div> 
 </div> 
@@ -74,7 +84,16 @@
 </header>
 
 <div ng-view></div>
-<br><br><br><br><br>
+<br><br><br><br><br><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <footer class="navbar">
         <div id="footer" class="row">
             <div class="col-md-4 col-sm-6 footer-navigation">

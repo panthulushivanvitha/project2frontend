@@ -20,10 +20,31 @@ app.config(function($routeProvider){
 		templateUrl:'views/jobform.html',
 		controller:'JobController'
 	})
+	.when('/getjob/:id',{
+		templateUrl:'views/jobdetail.html',
+		controller:'JobController'
+	})
 	.when('/alljobs',{
 		templateUrl:'views/jobtitle.html',
 		controller:'JobController'
 	})
+	.when('/addblog', {
+		templateUrl : 'views/blogform.html', // V to Controller
+		controller : 'BlogPostController'
+	})
+.when('/getallblogs',{
+		templateUrl:'views/blogslist.html',
+		controller:'BlogPostController'
+	})
+	.when('/getBlogForApproval/:id',{
+		templateUrl:'views/approvalform.html',
+		controller:'BlogDetailController'
+	})
+	.when('/getBlogDetail/:id',{
+		templateUrl:'views/blogdetail.html',
+		controller:'BlogDetailController'
+	})
+
 
 	.otherwise({
 		templateUrl:'views/home.html'

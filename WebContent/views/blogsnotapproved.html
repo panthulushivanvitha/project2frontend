@@ -1,0 +1,36 @@
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body data-ng-controller='UserController'>
+<div class="container" align="center">
+		<!-- <div class="row vertical-offset-100">
+		    <div class="col-md-8 col-md-offset-14">
+		    	<div class="panel panel-default">
+				 -->	<div class="panel-heading">
+				    	<h4 class="panel-title" align="center"><i>List Of Blogs</i></h4>
+				 	</div>
+<span ng-show="blogsWaitingForApproval.length==0">No Blogs waiting for approval</span>
+<div class="container" align="center">
+<div class="row" style="width: 600px">
+<div ng-repeat="blog in blogsWaitingForApproval">
+<div class="panel panel-default">
+<div class="panel-heading">
+<a href="#/getblognotapproved/{{blog.id}}">{{blog.blogTitle}}</a>
+</div>
+<div class="panel-body">
+<b>Posted On: </b> {{blog.postedOn | date:'medium'}}<br>
+<b>Posted By:</b>{{blog.postedBy.firstName}}&nbsp;{{blog.postedBy.lastName}}
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

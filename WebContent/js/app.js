@@ -28,26 +28,40 @@ app.config(function($routeProvider){
 		templateUrl:'views/jobtitle.html',
 		controller:'JobController'
 	})
-	.when('/addblog', {
-		templateUrl : 'views/blogform.html', // V to Controller
-		controller : 'BlogPostController'
-	})
-.when('/getallblogs',{
-		templateUrl:'views/blogslist.html',
+	.when('/addblog',{
+		templateUrl:'views/blogform.html',
 		controller:'BlogPostController'
 	})
-	.when('/getBlogForApproval/:id',{
-		templateUrl:'views/approvalform.html',
-		controller:'BlogDetailController'
+	.when('/blogsnotapproved',{
+		templateUrl:'views/blogsnotapproved.html',
+		controller:'BlogPostController'
 	})
-	.when('/getBlogDetail/:id',{
-		templateUrl:'views/blogdetail.html',
-		controller:'BlogDetailController'
+	.when('/blogsapproved',{
+		templateUrl:'views/blogsapproved.html',
+		controller:'BlogPostController'
 	})
+	.when('/getblog/:id',{
+		templateUrl:'views/blogdetails.html',
+		controller:'BlogDetailsController'
+	})
+	.when('/getblognotapproved/:id',{
+		templateUrl:'views/blogapprovalform.html',
+		controller:'BlogDetailsController'
+	})
+	.when('/getnotification/:id',{
+		templateUrl:'views/notificationdetails.html',
+		controller:'NotificationController'
+	})
+	
+	.when('/home',{
+		templateUrl:'views/home.html',
+		controller:'NotificationController'
 
+	})
 
 	.otherwise({
 		templateUrl:'views/home.html'
+			
 	})
 })
 	app.run(function($rootScope,$location,UserService,$cookieStore){

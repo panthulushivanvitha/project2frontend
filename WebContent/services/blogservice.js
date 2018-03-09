@@ -38,18 +38,12 @@ blogService.updateLikes=function(id)
 	}
 
 
-
-blogService.updateApproval=function(blogpost)
-{
-	return $http.put("http://localhost:8181/Backend2/updateApproval", blogpost)
-	}
-
 blogService.addComment=function(blogComment){
-    return $http.post("http://localhost:8181/Backend2/addblogcomment",blogComment)
+    return $http.post("http://localhost:8181/Backend2/addcomment",blogComment)
     }
 
-blogService.getBlogComments=function(blogId){
-    return $http.get("http://localhost:8181/Backend2/getblogcomments/"+blogId)
+blogService.getBlogComments=function(id){
+    return $http.get("http://localhost:8181/Backend2/blogcomments/"+id)
     }
 
 return blogService;

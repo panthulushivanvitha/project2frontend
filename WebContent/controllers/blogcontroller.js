@@ -29,4 +29,5 @@ app.controller('BlogPostController',function($scope,$location,$rootScope,BlogSer
 		if(response.status==401)
 			$location.path('/login')
 	})
+	
 })

@@ -1,11 +1,11 @@
-
+/* /* 
 body {font-family: Arial, Helvetica, sans-serif;
 
 background: url("https://kccsecurity.com/wp-content/uploads/2018/01/Background-Wallpapers.jpg");
  background-repeat: no-repeat;}
 * {box-sizing: border-box}
 
-/* Full-width input fields */
+Full-width input fields
 .container h1{
 	color:black;
 }
@@ -39,7 +39,7 @@ hr {
     margin-bottom: 25px;
 }
 
-/* Set a style for all buttons */
+Set a style for all buttons
 button {
     background-color: #4CAF50;
     color: white;
@@ -55,33 +55,316 @@ button:hover {
     opacity:1;
 }
 
-/* Extra styles for the cancel button */
+Extra styles for the cancel button
 .cancelbtn {
     padding: 14px 20px;
     background-color: #f44336;
 }
 
-/* Float cancel and signup buttons and add an equal width */
+Float cancel and signup buttons and add an equal width
 .cancelbtn, .signupbtn {
   float: left;
   width: 50%;
 }
 
-/* Add padding to container elements */
+Add padding to container elements
 .container {
     padding: 16px;
 }
 
-/* Clear floats */
+Clear floats
 .clearfix::after {
     content: "";
     clear: both;
     display: table;
 }
 
-/* Change styles for cancel button and signup button on extra small screens */
+Change styles for cancel button and signup button on extra small screens
 @media screen and (max-width: 300px) {
     .cancelbtn, .signupbtn {
        width: 100%;
     }
 }
+ */ */
+ main-content-agile{
+ align:cener;}
+ 
+ .sub-main-w3 {
+    width: 30%;
+    margin: 93px auto;
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+    padding: 50px;
+}
+.sub-main-w3 h2 {
+    color: #fff;
+    font-size: 1.8em;
+    letter-spacing: 1px;
+    margin-bottom: 1em;
+    text-align: center;
+    font-weight: 300;
+}
+.pom-agile {
+    padding: 11px 15px;
+    background: #fff;
+    margin-bottom: 16px;
+    border-radius: 26px;
+}
+.sub-main-w3 label {
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    display: inline-block;
+}
+.pom-agile input[type="text"], .pom-agile input[type="password"] {
+    outline: none;
+    font-size: .9em;
+    border: none;
+    background: transparent;
+    width: 93%;
+    color: #000;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 1px;
+}
+.right-w3l input[type="submit"] {
+    color: #fff;
+    background: #f53e71;
+    border: none;
+    padding: 13px 0;
+    margin-top: 30px;
+    outline: none;
+    width: 100%;
+    border-radius: 26px;
+    text-transform: uppercase;
+    font-size: .9em;
+    cursor: pointer;
+    letter-spacing: 1px;
+    font-family: 'Open Sans', sans-serif;
+    -webkit-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    transition: 0.5s all;
+}
+.right-w3l input[type="submit"]:hover {
+    background: #000;
+	-webkit-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+	transition: 0.5s all;
+}
+/* span.fa {
+    float: left;
+    color: #000;
+    line-height:1.5;
+    margin-right: 10px;
+}
+.sub-agile {
+    float: center;
+}
+.sub-w3l a {
+    float: right;
+    font-size: .9em;
+    color: #fff;
+    letter-spacing: 1px;
+} */
+/*--placeholder-color--*/
+/*--//placeholder-color--*/
+/*--//main--*/
+
+/* /*--responsive--*/
+@media(max-width: 1440px){
+    .sub-main-w3 {
+        width: 32%;
+    }
+   
+}
+@media(max-width: 1366px){
+    .sub-main-w3 {
+        width: 35%;
+    }
+}
+@media(max-width: 1280px){
+    .header-w3l h1 {
+        font-size: 3.3em;
+    }
+}
+@media(max-width: 1080px){
+    .sub-main-w3 h2 {
+        font-size: 1.7em;
+    }
+    .sub-main-w3 {
+        width: 38%;
+        margin: 78px auto;
+    }
+}
+@media(max-width: 1050px){
+    .sub-main-w3 {
+        width: 40%;
+    }
+}
+@media(max-width: 1024px){
+    .header-w3l h1 {
+        font-size: 3.2em;
+        letter-spacing: 6px;
+    }
+}
+@media(max-width: 991px){
+    .sub-main-w3 {
+        width: 44%;
+    }
+}
+@media(max-width: 900px){
+    .sub-main-w3 {
+        width: 48%;
+    }
+}
+@media(max-width: 800px){
+  
+    .sub-main-w3 {
+        width: 55%;
+        padding: 40px;
+        margin: 65px auto;
+    }
+    .pom-agile {
+        padding: 10px 15px;
+    }
+    span.fa {
+        line-height: 1.4;
+    }
+}
+@media(max-width: 736px){
+    .sub-main-w3 {
+        width: 57%;
+    }
+}
+@media(max-width: 667px){
+    .header-w3l h1 {
+        font-size: 3em;
+    }
+    .sub-main-w3 {
+        width: 62%;
+    }
+   
+}
+@media(max-width: 640px){
+    .sub-main-w3 {
+        width: 65%;
+    }
+}
+@media(max-width: 600px){
+    .header-w3l h1 {
+        font-size: 2.8em;
+        letter-spacing: 3px;
+    }
+    .sub-main-w3 {
+        width: 69%;
+    }
+    .right-w3l input[type="submit"] {
+        padding: 12px 0;
+        font-size: .85em;
+    }
+}
+@media(max-width: 568px){
+    .sub-main-w3 {
+        width: 73%;
+    }
+}
+@media(max-width: 480px){
+   
+    .pom-agile input[type="text"], .pom-agile input[type="password"] {
+        width: 92%;
+    }
+    span.fa {
+        margin-right: 8px;
+    }
+    .sub-agile input[type="checkbox"]+label {
+        font-size: .85em;
+    }
+    .sub-w3l a {
+        font-size: .8em;
+    }
+    .footer p {
+        line-height: 1.9;
+        margin-bottom: 20px;
+    }
+}
+@media(max-width: 440px){
+    .pom-agile input[type="text"], .pom-agile input[type="password"] {
+        width: 91%;
+    }
+    .header-w3l h1 {
+        font-size: 2.4em;
+    }
+    .sub-main-w3 {
+        margin: 40px auto;
+    }
+    .sub-agile input[type="checkbox"]+label {
+        font-size: .8em;
+    }
+    .sub-main-w3 h2 {
+        font-size: 1.6em;
+    }
+}
+@media(max-width: 414px){
+
+}
+@media(max-width: 384px){
+    .header-w3l h1 {
+        font-size: 2.1em;
+    }
+    .sub-main-w3 {
+        padding: 30px;
+    }    
+    .pom-agile input[type="text"], .pom-agile input[type="password"] {
+        width: 89%;
+    }
+    .sub-main-w3 label {
+        font-size: 14px;
+    }
+    .sub-main-w3 h2 {
+        font-size: 1.4em;
+    }
+    .sub-w3l a, .sub-agile {
+        float: none;
+    }
+}
+@media(max-width: 375px){
+
+}
+@media(max-width: 320px){
+    .header-w3l h1 {
+        font-size: 1.9em;
+        letter-spacing: 1px;
+    }
+    .header-w3l {
+        padding-top: 1.5em;
+    }
+    .sub-main-w3 {
+        padding: 20px;
+        width: 78%;
+    }
+    .sub-main-w3 h2 {
+        font-size: 1.3em;
+    }
+    .pom-agile input[type="text"], .pom-agile input[type="password"] {
+        width: 89%;
+    }
+    .pom-agile {
+        padding: 8px 15px;
+        margin-bottom: 14px;
+    }
+    .sub-main-w3 label {
+        font-size: 13px;
+    }
+    .right-w3l input[type="submit"] {
+        padding: 11px 0;
+        font-size: .8em;
+    }
+   
+}
+
+--//responsive-- */

@@ -21,7 +21,9 @@
 </div>
 <div class="panel-body">
 <b>Posted On: </b> {{blog.postedOn | date:'medium'}}<br>
-<b>Posted By:</b>{{blog.postedBy.firstName}}&nbsp;{{blog.postedBy.lastName}}
+<b>Posted By:</b><img src="http://localhost:8181/Backend2/getimage/{{blog.postedBy.email}}"  width="30px" height="30px" >
+
+{{blog.postedBy.firstName}}&nbsp;{{blog.postedBy.lastName}}
 </div>
 </div>
 </div>

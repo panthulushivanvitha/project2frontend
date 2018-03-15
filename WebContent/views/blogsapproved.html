@@ -1,25 +1,33 @@
+
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body data-ng-controller='UserController'>
+   <style>
+body {
+    background-image: url("https://wallpaperscraft.com/image/lighthouse_bay_sunset_sky_119925_2160x1442.jpg");
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+	font-family: 'Open Sans', sans-serif;
+	height: 100vh;
+}
+</style> 
+ </head>
+ 
+ <body>
+ 
 
-<div class="container" align="center">
-<div class="row" style="width: 600px">
 <div ng-repeat="blog in blogsApproved">
-<div class="panel panel-default">
-<div class="panel-heading">
-<a href="#/getblog/{{blog.id}}">{{blog.blogTitle}}</a>
-</div>
-<div class="panel-body">
+<div class="main-content-agile">
+		<div class="sub-main-w3">
+<h2><a href="#/getblog/{{blog.id}}"style="color:white">{{blog.blogTitle}}</a></h2>
+
+<div class="panel-body" style="color:white">
 <b>Posted On: </b> {{blog.postedOn | date:'medium'}}<br>
-<b>Posted By:</b>{{blog.postedBy.firstName}}&nbsp;{{blog.postedBy.lastName}}
+<b>Posted By:</b><img src="http://localhost:8181/Backend2/getimage/{{blog.postedBy.email}}"  width="30px" height="30px" >{{blog.postedBy.firstName}}&nbsp;{{blog.postedBy.lastName}}
 </div>
 </div>
-</div>
-</div>
-</div>
-</div>
-</body>
-</html>
+</div></div>

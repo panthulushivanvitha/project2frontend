@@ -368,3 +368,20 @@ Change styles for cancel button and signup button on extra small screens
 }
 
 --//responsive-- */
+  .pb-cmnt-container {
+        font-family: Lato;
+        margin-top: 100px;
+    }
+    .sub-main-w2 {
+        padding: 20px;
+        width: 78%;
+         height: 78%;
+    }
+
+    .pb-cmnt-textarea {
+        resize: none;
+        padding: 20px;
+        height: 130px;
+        width: 100%;
+        border: 1px solid #F2F2F2;
+    }

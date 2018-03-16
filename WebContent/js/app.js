@@ -74,6 +74,11 @@ app.config(function($routeProvider){
 		controller:'FriendController'
 
 	})
+	.when('/pendingrequests',{
+		templateUrl:'views/pendingrequest.html',
+		controller:'FriendController'
+
+	})
 	
 
 	.otherwise({

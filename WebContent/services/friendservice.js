@@ -12,5 +12,12 @@ app.factory('FriendService',function($http){
 	friendService.getPendingRequests=function(){
 		return $http.get("http://localhost:8181/Backend2/pendingrequests")
 	}
+	friendService.acceptRequest=function(request) {
+		return $http.put("http://localhost:8181/Backend2/acceptrequest",request);
+	}
+	
+	friendService.deleteRequest=function(request) {
+		return $http.put("http://localhost:8181/Backend2/deleterequest",request)
+	}
 	return friendService;
 })

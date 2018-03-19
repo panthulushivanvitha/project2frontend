@@ -19,8 +19,8 @@
 
 {{request.fromId.firstName}} &nbsp;{{request.fromId.lastName}}<br>
 <span class="fa fa-phone" aria-hidden="true"></span>{{request.fromId.phonenumber}}<br>
-<button type="button" class="button button-primary">Accept</button>
-<button type="button" class="button button-warning">reject</button>
+<button type="button" class="btn btn-primary" ng-click="acceptRequest(request)">Accept</button>
+<button type="button" class="btn btn-warning" ng-click="deleteRequest(request)">Delete</button>
 </li>
 
 </ul>

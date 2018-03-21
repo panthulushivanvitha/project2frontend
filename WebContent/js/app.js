@@ -79,7 +79,11 @@ app.config(function($routeProvider){
 		controller:'FriendController'
 
 	})
-	
+	.when('/friends',{
+		templateUrl:'views/friendsList.html',
+		controller:'FriendController'
+
+	})
 
 	.otherwise({
 		templateUrl:'views/home.html'

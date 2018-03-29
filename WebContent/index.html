@@ -40,6 +40,13 @@
       <script type="text/javascript" src="services/notificationservice.js"></script>
       <script type="text/javascript" src="controllers/friendcontroller.js"></script> 
       <script type="text/javascript" src="services/friendservice.js"></script>
+      <script src="resources/js/plugins/sockjs.js"></script>
+ <script src="resources/js/plugins/stomp.js"></script>
+ <script src="resources/js/plugins/sockjs.min.js"></script>
+ 
+ <script src="resources/js/plugins/stomp.min.js"></script>
+ <script type="text/javascript" src="controllers/chatcontroller.js"></script>
+ <script type="text/javascript" src="services/chatservice.js"></script>
       
       
       
@@ -60,7 +67,7 @@
         <span class="icon-bar"></span>
       </button>
            	<div class="navbar-header">
-    	        <a class="navbar-brand" href="/">Twitter</a>
+    	        <a class="navbar-brand" href="/">KENNEDYHIGH</a>
     	    </div>
     	    
     	    <div class="collapse navbar-collapse" id="collapse-example">
@@ -74,11 +81,12 @@
 
 <li><a href="#/register"><span class="fa fa-lock" ng-show="loggedInUser.firstName==undefined">Register</span></a></li>
 <li><a href="#/login"><span class="fa fa-key" ng-show="loggedInUser.firstName==undefined">Login</span></a></li>
+<li><a href="#" ng-show="loggedInUser.firstName">Hi  {{loggedInUser.firstName}}&nbsp;{{loggedInUser.lastName}}</a></li>
+<li><a href="#/"><span class="glyphicon glyphicon-log-out"  ng-click="logout()"ng-show="loggedInUser.firstName!=undefined">Logout</span></a></li>
+
 <li><a href="#/addjob" ng-show="loggedInUser.role=='ADMIN'">Save Job Details</a><li>
  <li><a href="#/alljobs" ng-show="loggedInUser.firstName">GetAllJobs</a></li>
 <li><a href="#/edituserprofile"><span class="glyphicon glyphicon-pencil" ng-show="loggedInUser.firstName!=undefined">EditProfile</span></a></li>
-<li><a href="#" ng-show="loggedInUser.firstName">Hi  {{loggedInUser.firstName}}&nbsp;{{loggedInUser.lastName}}</a></li>
-<li><a href="#/"><span class="glyphicon glyphicon-log-out"  ng-click="logout()"ng-show="loggedInUser.firstName!=undefined">Logout</span></a></li>
 <li class="dropdown">
     	     			  <li class="dropdown"><a href="" class="dropdown-toggle"
 data-toggle="dropdown" ng-show="loggedInUser.firstName!=undefined">Blog<b class="caret"></b></a>
@@ -95,7 +103,16 @@ data-toggle="dropdown" ng-show="loggedInUser.firstName!=undefined">Friend<b clas
 <li><a href="#/suggestedusers">Suggested User</a><li>
 <li><a href="#/pendingrequests">Pending Requests</a><li>
 <li><a href="#/friends">Friends</a></li>
-</ul><li>
+</ul></li>
+<li><a href="#/chat" ng-show="loggedInUser.firstName">Chat </a></li>
+ <li>
+ 
+ <div class="navbar buttons" ng-show="loggedInUser.firstName!=undefined">
+<input type="text" placeholder="search user" class="navbar search" ng-model="user">
+<a href="#/searchuser" class="btn navbar-btn btn-primary pull-right" type="button" ng-click="searchUser(user)">
+<i class="fa fa-search"></i></a>
+</div>
+ </li>>
 <li class="dropdown">
 <a href="" class="dropdown-toggle" data-toggle="dropdown" ng-show="loggedInUser.firstName">
 <span class="glyphicon glyphicon-globe">
@@ -104,6 +121,7 @@ data-toggle="dropdown" ng-show="loggedInUser.firstName!=undefined">Friend<b clas
 <span class="dropdown-content">
 <li ng-repeat="n in notifications">
 <a href="#/getnotification/{{n.id}}">Blog titled <b>{{n.blogTitle}}</b>approval status is updated</a>
+
 <hr>
 </li>
 </span>

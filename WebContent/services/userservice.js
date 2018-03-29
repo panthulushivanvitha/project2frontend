@@ -4,6 +4,7 @@
 app.factory('UserService',function($http){
 	var userService={}
 	
+	
 	userService.registerUser=function(user){
 	
 	console.log('in userservice'+user)	
@@ -30,5 +31,8 @@ app.factory('UserService',function($http){
 		    
 	        return $http.put("http://localhost:8181/Backend2/updateuser",user)
 	    }
+	 userService.searchUser=function(user) {
+			return $http.get("http://localhost:8181/Backend2/searchuser/"+user)
+		}
 	return userService;
 })
